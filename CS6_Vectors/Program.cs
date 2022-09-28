@@ -12,5 +12,12 @@ Console.WriteLine($"|{v}| = {v.R}");
 Console.WriteLine($"|{w}| = {w.R}");
 Console.WriteLine($"|{sum}| = {sum.R}");
 
+RealValuedFunction square = new(x => x * x + Math.Sin(x));
+
+var graph = square.GenerateGraphSpreadsheet(-10, 10, 0.1);
+
+
+graph.Save("graphOfXSquaredPlusSineX.csv");
+
 Console.WriteLine("Done!");
 Console.ReadLine();
